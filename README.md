@@ -41,15 +41,7 @@ Verify installation with by executing command:
 solana --version
 ```
 
-4) Run local validator
-
-```bash
-
-solana config set --url localhost
-solana-test-validator
-```
-
-5) Tesing your setup
+4) Tesing your setup
 
 Generate keypair account and get some SOL tokens:
 
@@ -60,19 +52,27 @@ solana airdrop 2
 
 ## Run instructions
 
-1) Compile smart contracts by positioning terminal into project folder and executing following command:
+1) Run local validator
+
+```bash
+
+solana config set --url localhost
+solana-test-validator
+```
+
+2) Compile smart contracts by positioning terminal into project folder and executing following command:
 
 ```bash
 cargo build-bpf --manifest-path=./Cargo.toml --bpf-out-dir=dist/program
 ```
 
-2) Deploy program:
+3) Deploy program:
 
 ```bash
 solana program deploy dist/program/token_program.so
 ```
 
-3) Run client
+4) Run client
 
 ```bash
 npm install
